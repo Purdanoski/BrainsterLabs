@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Filip Purdanoski" />
+
+    <script src="https://kit.fontawesome.com/86edc73cd7.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" type="image/logo" href="/images/Brainster-fav.png" />
+    <title>Brainster Labs -вработи наш студент</title>
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav>
+      <a href="./index.html"><img src="./images/Brainster-logo.png" alt="Logo" /></a>
+      <button class="nav-toggler"><i class="fa-solid fa-bars fa-3x"></i></button>
+      <div class="nav-wrap">
+        <div class="btn-x">
+          <span class="first-bar">
+            <span class="second-bar"></span>
+          </span>
+        </div>
+        <ul>
+          <li><a href="./academies.html" target="_blank" class="nav-btn">Академија за маркетинг</a></li>
+          <li><a href="./academies.html" target="_blank" class="nav-btn">Академија за програмирање</a></li>
+          <li><a href="./academies.html" target="_blank" class="nav-btn">Академија за data science</a></li>
+          <li><a href="./academies.html" target="_blank" class="nav-btn">Академија за дизајн</a></li>
+          <li><a href="./contact.html" target="_blank" class="btn">Вработи наш студент</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- FORM SECTION -->
+    <section class="wrapper">
+      <h2>Вработи студенти</h2>
+      <div class="form-container">
+        <form>
+          <div class="form-field">
+            <label for="name">Име и презиме</label>
+            <input type="text" id="name" name="name" placeholder="Вашето име и презиме" />
+            <p class="name error">
+              <small><em>Задолжително поле, внесете го вашето име и презиме</em></small>
+            </p>
+          </div>
+          <div class="form-field">
+            <label for="company">Име на компанија</label>
+            <input type="text" id="company" name="company" placeholder="Име на вашата компанија" />
+            <p class="company error">
+              <small><em>Задолжително поле, внесете го името на вашата компанија</em></small>
+            </p>
+          </div>
+          <div class="form-field">
+            <label for="email">Контакт имејл</label>
+            <input type="email" id="email" name="email" placeholder="Контакт имејл од вашата компанија" />
+            <p class="email error">
+              <small><em>Внесете валидна имејл адреса (name@domain.com)</em></small>
+            </p>
+          </div>
+          <div class="form-field">
+            <label for="number">Контакт телефон</label>
+            <input type="number" id="number" name="number" placeholder="Контакт телефон од вашата компанија" />
+            <p class="number error">
+              <small><em>Задолжително поле, внесете контакт телефонски број</em></small>
+            </p>
+          </div>
+          <div class="form-field">
+            <label>Тип на студенти</label>
+            <div class="custom-select">
+              <select>
+                <option value="0">Изберете тип на студент</option>
+                <option value="1">Студенти од маркетинг</option>
+                <option value="2">Студенти од програмирање</option>
+                <option value="3">Студенти од data science</option>
+                <option value="4">Студенти од дизајн</option>
+              </select>
+            </div>
+            <p class="student error">
+              <small><em>Задолжително поле, изберете тип на студенти</em></small>
+            </p>
+          </div>
+          <div class="form-field">
+            <input type="submit" id="submit" value="испрати" class="btn" />
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="position-fixed">
+      <p>Изработено со <i class="fa-solid fa-heart"></i> од студентите на Brainster</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <!-- NAVIGATION -->
+    <script src="./javascript/navbar.js"></script>
+    <!-- VALIDATION -->
+    <script src="./javascript/form-validation.js"></script>
+  </body>
+</html>

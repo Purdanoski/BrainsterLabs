@@ -1,0 +1,66 @@
+@use "../abstract/variables" as var;
+@use "sass:math";
+
+body {
+    color: var.$text-color-primary;
+    font-family: var.$font-family-base;
+    font-size: var.$font-size-base;
+    font-weight: var.$font-weight-normal;
+    line-height: var.$line-height-base;
+    background-color: var.$background-color-base;
+}
+
+h1 {
+    font-size: var.$heading-size-huge;
+    text-align: center;
+    color: var.$text-color-secondary;
+    text-transform: capitalize;
+    font-weight: var.$font-weight-medium;
+    line-height: var.$line-height-small;
+    margin-bottom: math.div(var.$gutter-base, 2);
+}
+
+h2 {
+    font-size: var.$heading-size-small;
+    font-weight: var.$font-weight-medium;
+    line-height: var.$line-height-small;
+    margin-bottom: math.div(var.$gutter-base, 2);
+    text-align: center;
+}
+
+h3 {
+    font-size: var.$heading-size-tiny;
+    font-weight: var.$font-weight-medium;
+    line-height: var.$line-height-small;
+    margin-bottom: math.div(var.$gutter-base, 2);
+}
+
+p {
+    margin-bottom: math.div(var.$gutter-base, 2);
+}
+
+ul {
+    margin-bottom: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var.$text-color-primary;
+    font-weight: var.$font-weight-medium;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var.$background-color-primary;
+    border-radius: math.div(var.$gutter-base, 6);
+    padding: math.div(var.$gutter-base, 2) var.$gutter-base;
+    color: var.$text-color-secondary;
+    font-weight: var.$font-weight-bold;
+
+    &:hover {
+        filter: brightness(1.2);
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    }
+}

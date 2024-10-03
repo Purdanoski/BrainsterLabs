@@ -1,0 +1,19 @@
+@use "../abstract/variables" as var;
+@use "../abstract/mixins" as mix;
+@use "sass:math";
+
+footer {
+    background-color: var.$background-color-secondary;
+    color: var.$text-color-secondary;
+    text-align: center;
+    padding: math.div(var.$gutter-base, 2) 0;
+    font-weight: var.$font-weight-bold;
+
+    p {
+        margin-bottom: 0;
+
+        i {
+            color: var.$background-color-primary;
+        }
+    }
+}

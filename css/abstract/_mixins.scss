@@ -1,0 +1,32 @@
+@use "./variables" as var;
+@use "sass:math";
+
+%section {
+    padding-top: var.$gutter-base;
+    padding-bottom: var.$gutter-base;
+}
+
+%wrap {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// RESPONSIVENESS MIXINS
+@mixin laptop-big-styles {
+    @media screen and (min-width: var.$breakpoint-laptop-big) {
+        @content;
+    }
+}
+
+@mixin laptop-styles {
+    @media screen and (min-width: var.$breakpoint-laptop) {
+        @content;
+    }
+}
+
+@mixin tablet-styles {
+    @media screen and (min-width: var.$breakpoint-tablet) {
+        @content;
+    }
+}

@@ -1,0 +1,137 @@
+@use "../abstract/variables" as var;
+@use "../abstract/mixins" as mix;
+@use "sass:math";
+
+main {
+    @extend %section;
+    @extend %wrap;
+
+    @include mix.laptop-big-styles {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    h2 {
+        margin-bottom: var.$gutter-base;
+    }
+
+    .cards-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @include mix.tablet-styles {
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-right: var.$gutter-base*-1;
+        }
+    }
+
+    .card {
+        cursor: pointer;
+        flex-basis: 100%;
+
+        @include mix.tablet-styles {
+            flex-basis: 50%;
+        }
+
+        @include mix.laptop-styles {
+            flex-basis: 33.333%;
+        }
+    }
+
+    .card-inner {
+        margin-bottom: var.$gutter-base;
+        background-color: var.$text-color-secondary;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: math.div(var.$gutter-base, 3);
+
+        @include mix.tablet-styles {
+            margin-right: var.$gutter-base;
+        }
+
+        img {
+            border-top-right-radius: math.div(var.$gutter-base, 3);
+            border-top-left-radius: math.div(var.$gutter-base, 3);
+            object-fit: cover;
+            object-position: center;
+            height: 200px;
+        }
+
+        .card-body {
+            padding: math.div(var.$gutter-base, 2);
+        }
+
+        p {
+            @include mix.tablet-styles {
+                font-size: var.$font-size-medium;
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var.$background-color-base;
+            padding: math.div(var.$gutter-base, 6);
+            font-size: var.$font-size-small;
+            font-weight: var.$font-weight-medium;
+        }
+
+        h3 {
+            width: 85%;
+        }
+
+        .card-btn {
+            text-align: right;
+
+        }
+
+        .btn {
+            text-align: center;
+            width: 100%;
+
+            @include mix.laptop-big-styles {
+                width: unset;
+            }
+        }
+
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: scale(1.03);
+
+        }
+    }
+
+    .show-more {
+        display: block;
+        margin: 0 auto;
+        border: none;
+
+        @include mix.laptop-styles {
+            display: none;
+        }
+    }
+
+    .card {
+        display: none;
+    }
+
+    .card.show {
+        display: none;
+
+        @include mix.laptop-styles {
+            display: block;
+        }
+    }
+
+    .card.show.mobile {
+        display: block;
+    }
+
+    .pagination {
+        display: none;
+
+        @include mix.tablet-styles {
+            display: block;
+        }
+    }
+}

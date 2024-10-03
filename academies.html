@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Filip Purdanoski" />
+
+    <script src="https://kit.fontawesome.com/86edc73cd7.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" type="image/logo" href="/images/Brainster-fav.png" />
+    <title>Coming Soon</title>
+  </head>
+  <body>
+    <section class="coming-soon">
+      <div class="flexbox-1">
+        <!-- NAVIGATION -->
+        <nav class="logo-img">
+          <a href="./index.html"><img src="./images/Brainster-logo.png" alt="Logo" /></a>
+        </nav>
+        <!-- MAIN SECTION -->
+        <div class="section-title">
+          <h2 class="title-soon">Страната е во изработка, доаѓаме наскоро!</h2>
+          <p>Претплатете се за да бидете навремено информирани.</p>
+          <form class="newsletter-form">
+            <div class="newsletter-wrap">
+              <input type="email" placeholder="Email address" class="newsletter-input" id="emailInput" />
+              <button class="newsletter-btn" type="button" onclick="validateEmail()">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+              <span class="error-message" id="errorMessage"></span>
+            </div>
+          </form>
+          <div class="social-media">
+            <span class="follow">Follow us</span>
+            <a href="https://www.facebook.com/" target="_blank"
+              ><i class="fa-brands fa-facebook fa-2x social-icons"></i
+            ></a>
+            <a href="https://www.instagram.com/" target="_blank"
+              ><i class="fa-brands fa-instagram fa-2x social-icons"></i
+            ></a>
+            <a href="https://twitter.com/" target="_blank"
+              ><i class="fa-brands fa-square-twitter fa-2x social-icons"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <!-- IMAGE SECTION -->
+      <div class="flexbox-2"></div>
+    </section>
+
+    <!-- VALIDATION -->
+    <script src="./javascript/newsletter-validation.js"></script>
+  </body>
+</html>
